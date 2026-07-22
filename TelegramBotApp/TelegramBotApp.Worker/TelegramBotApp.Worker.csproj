@@ -15,5 +15,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Telegram.Bot" Version="22.10.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Telegram.Domain\TelegramBotApp.Domain.csproj" />
+    <ProjectReference Include="..\TelegramBotApp.Application\TelegramBotApp.Application.csproj" />
+    <ProjectReference Include="..\TelegramBotApp.Infrastructure\TelegramBotApp.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
