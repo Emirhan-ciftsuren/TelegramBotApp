@@ -4,15 +4,15 @@ using TelegramBotApp.Domain.Enums;
 using TelegramBotApp.Domain.Entities; 
 using TelegramBotApp.Application.DTOs;
 using TelegramBotApp.Application.Interfaces;
-using TelegramBotApp.Infrastructure.Persistence;
+
 
 namespace TelegramBotApp.Application.Services;
 
 public class NotificationService : INotificationService
 {
-    private readonly AppDbContext _context;
+    private readonly IApplicationDbContext _context;
 
-    public NotificationService(AppDbContext context)
+    public NotificationService(IApplicationDbContext context)
     {
         _context = context;
     }

@@ -2,15 +2,15 @@
 using TelegramBotApp.Application.DTOs;
 using TelegramBotApp.Application.Interfaces;
 using TelegramBotApp.Domain.Entities;
-using TelegramBotApp.Infrastructure.Persistence;
+
 
 namespace TelegramBotApp.Application.Services;
 
 public class TelegramUserService : ITelegramUserService
 {
-    private readonly AppDbContext _context;
+    private readonly IApplicationDbContext _context;
 
-    public TelegramUserService(AppDbContext context)
+    public TelegramUserService(IApplicationDbContext context)
     {
         _context = context;
     }

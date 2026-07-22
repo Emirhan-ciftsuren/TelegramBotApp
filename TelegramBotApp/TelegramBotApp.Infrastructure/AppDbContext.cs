@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
+using TelegramBotApp.Application.Interfaces;
 using TelegramBotApp.Domain.Entities; 
 
 namespace TelegramBotApp.Infrastructure.Persistence;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IApplicationDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
